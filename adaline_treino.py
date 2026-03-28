@@ -45,14 +45,14 @@ def treinar_adaline(entradas_x, desejado_d, taxa_aprendizado, max_epocas, tolera
 def classificar (amostra_x, pesos):
     amostra_bias = np.insert(amostra_x, 0, -1)  
     u = np.dot(pesos, amostra_bias)
-    return 1 if u >= 0 else 0
+    return 1 if u >= 0.5 else 0
 
 
 x_treino, d_treino = carregar_dados('dados2-tra.txt')
 x_teste, d_teste = carregar_dados('dados2-tst.txt')
 
 taxa_aprendizado = 0.01
-max_epocas = 1000
+max_epocas = 30
 tolerancia = 0.001
 
 pesos_salvos = {}
