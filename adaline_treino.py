@@ -1,5 +1,7 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
+matplotlib.use('Agg')  
 
 def carregar_dados(caminho_arquivo):
     dados = np.loadtxt(caminho_arquivo)
